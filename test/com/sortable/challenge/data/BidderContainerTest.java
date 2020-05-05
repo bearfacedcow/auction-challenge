@@ -41,6 +41,6 @@ class BidderContainerTest {
     void testForNonExistentBidder() {
         bidderContainer.add(new Bidder("TEST1", 0));
         bidderContainer.add(new Bidder("TEST2", .02));
-        assertTrue(bidderContainer.getBidder("TEST3").isEmpty());
+        assertFalse(bidderContainer.getBidder("TEST3").isPresent());
     }
 }

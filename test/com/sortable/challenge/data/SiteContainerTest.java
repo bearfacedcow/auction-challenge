@@ -35,6 +35,6 @@ class SiteContainerTest {
         siteContainer.add(new Site("test1.com", 30));
         siteContainer.add(new Site("test2.com", 30));
         Optional<Site> site = siteContainer.getSite("test3.com");
-        assertTrue(site.isEmpty());
+        assertFalse(site.isPresent());
     }
 }
